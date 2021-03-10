@@ -13,22 +13,42 @@ const StyledNav = styled.nav`
 
     div {
       display: flex;
-      align-items: center;
+      border: 2px solid red;
+      /* align-items: center; */
       flex: 2;
+      li {
+        border: 2px solid red;
+      }
       details {
         position: relative;
+        height: 100%;
+        border: 2px solid red;
+      }
+      details > summary {
+        list-style: none;
+        cursor: pointer;
       }
       details > summary::-webkit-details-marker {
         display: none;
       }
       details > ul {
         position: absolute;
-        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 6px;
+        margin-top: 1.2rem;
+
+        background-color: var(--color-bg-white);
+        color: var(--color-text-black);
+
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
       }
 
       & ul:first-child {
         display: flex;
-        align-items: center;
+        border: 2px solid red;
+        /* align-items: center; */
 
         & > *:not(:last-child) {
           margin-right: 1.2rem;
@@ -39,6 +59,7 @@ const StyledNav = styled.nav`
     form {
       margin-left: auto;
       margin-right: 0.5rem;
+      border: 2px solid red;
 
       input {
         color: var(--color-text-white);

@@ -3,6 +3,19 @@ import StyledNav from "./StyledNav";
 import data from "./navData";
 
 const Navbar = () => {
+  const detailHandler = React.useRef();
+  function handleMouseEnter(e) {
+    const details = detailHandler.current;
+    if (!details.open) {
+      console.log("true");
+      details.open = true;
+    }
+  }
+
+  function handleMouseLeave() {
+    const details = detailHandler.current;
+    details.open = false;
+  }
   return (
     <StyledNav>
       <svg
@@ -20,23 +33,26 @@ const Navbar = () => {
       <div>
         <ul>
           <li>
-            <details>
-              <summary>Why Github?</summary>
+            <details
+              ref={detailHandler}
+              onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleMouseEnter}
+            >
+              <summary>
+                Why Github? <span></span>
+              </summary>
               <ul>
                 <li>
                   <a href="">Features</a>
+                  <ul></ul>
+                </li>
+                <hr />
+
+                <li>
+                  <a href="">Github sponsors</a>
                 </li>
                 <li>
-                  <a href="">Features</a>
-                </li>
-                <li>
-                  <a href="">Features</a>
-                </li>
-                <li>
-                  <a href="">Features</a>
-                </li>
-                <li>
-                  <a href="">Features</a>
+                  <a href="">costumer stories</a>
                 </li>
               </ul>
             </details>

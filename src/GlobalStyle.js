@@ -35,10 +35,13 @@ const GlobalStyle = createGlobalStyle`
         --color-text-tertiary: #6a737d;
         --color-text-placeholder: #caccd0;
         --color-text-white: #fff;
+        --color-text-black: #000;
         --color-icon-primary: #24292e;
         --color-icon-secondary: #586069;
         --color-icon-tertiary: #959da5;
         --color-bg-input: #293244;
+        --color-bg-white: #fefefe;
+        --color-bg-black: #111;
         --padding-button: 0.4rem 0.5rem;
         --border-radius: 10px;
 
