@@ -1,10 +1,13 @@
 import Navbar from "./Navbar";
 import GlobalStyle from "./GlobalStyle";
+import Homepage from "./Homepage";
 function App() {
   return (
     <div className="App">
-      <GlobalStyle />
-      <Navbar />
+      <Homepage>
+        <GlobalStyle />
+        <Navbar />
+      </Homepage>
     </div>
   );
 }

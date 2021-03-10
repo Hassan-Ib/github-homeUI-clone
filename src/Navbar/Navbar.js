@@ -1,5 +1,6 @@
 import React from "react";
 import StyledNav from "./StyledNav";
+import data from "./navData";
 
 const Navbar = () => {
   return (
@@ -17,13 +18,69 @@ const Navbar = () => {
         ></path>
       </svg>
       <div>
-        <ul></ul>
+        <ul>
+          <li>
+            <details>
+              <summary>Why Github?</summary>
+              <ul>
+                <li>
+                  <a href="">Features</a>
+                </li>
+                <li>
+                  <a href="">Features</a>
+                </li>
+                <li>
+                  <a href="">Features</a>
+                </li>
+                <li>
+                  <a href="">Features</a>
+                </li>
+                <li>
+                  <a href="">Features</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <a href="#">Team</a>
+          </li>
+          <li>
+            <a href="#">Enterprice</a>
+          </li>
+          <li>
+            <a href="#">Explore</a>
+          </li>
+          <li>
+            <a href="#">Marketplace</a>
+          </li>
+
+          <li>
+            <a href="#">pricing</a>
+          </li>
+        </ul>
+
+        <form action="#">
+          <label htmlFor="search">
+            <input
+              type="search"
+              placeholder="search github"
+              id="search"
+              autoComplete="off"
+              spellCheck="false"
+              autoCapitalize="off"
+              autoCorrect="false"
+            />
+            <img
+              src="https://github.githubassets.com/images/search-key-slash.svg"
+              alt="search icon"
+            />
+          </label>
+
+          <input type="button" value="sign in" />
+
+          <input type="button" value="sign up" />
+        </form>
       </div>
-      <form action="#">
-        <input type="search" placeholder="search github" />
-        <input type="button" value="sign in" />
-        <input type="button" value="sign up" />
-      </form>
 
       <button>sign up</button>
     </StyledNav>

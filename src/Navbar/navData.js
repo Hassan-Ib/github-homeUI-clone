@@ -1,15 +1,5 @@
 const data = {
-  1: {
-    name: {
-      placeholder: "why Github?",
-      subLinks: {
-        1: {
-          placeHolder: "features",
-        },
-      },
-    },
-    link: "",
-  },
+  link: "",
 };
 
 // console.log(data)
