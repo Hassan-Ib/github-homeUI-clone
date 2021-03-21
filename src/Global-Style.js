@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
     
     :root{
- 
         --size : 1.2;
         --letter-spacing: 1px;
         --letter-spacing-md: 2px;
@@ -35,7 +34,9 @@ const GlobalStyle = createGlobalStyle`
         --color-text-tertiary: #6a737d;
         --color-text-placeholder: #caccd0;
         --color-text-white: #fff;
+        --color-text-white-1: rgba(256,256,256, .8);
         --color-text-black: #000;
+        --color-text-black-1: rgba(0,0,0,.8);
         --color-icon-primary: #24292e;
         --color-icon-secondary: #586069;
         --color-icon-tertiary: #959da5;
@@ -45,7 +46,10 @@ const GlobalStyle = createGlobalStyle`
         --padding-button: 0.4rem 0.5rem;
         --border-radius: 10px;
 
+        --media-screen-big:min-width :75em;
+
     }   
+    
     [data-theme=dark]{
 
     }
