@@ -3,7 +3,8 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
     
     :root{
-        --size : 1.2;
+        --scale : 1;
+        
         --letter-spacing: 1px;
         --letter-spacing-md: 2px;
         --color-slight-white: #fefefefe;
@@ -45,8 +46,10 @@ const GlobalStyle = createGlobalStyle`
         --color-bg-black: #111;
         --padding-button: 0.4rem 0.5rem;
         --border-radius: 10px;
-
-        --media-screen-big:min-width :75em;
+        --font-size-sm: .8rem;
+        --font-size-md: 1rem;
+        --font-size: 1.1rem;
+        --media-screen-big:75em;
 
     }   
     

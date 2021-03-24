@@ -1,10 +1,40 @@
 import React from "react";
-import Styledheader from "./HomepageStyle";
+import Styledheader, {
+  Banner,
+  BannerText,
+  BannerImage,
+  BannerForm,
+  GitUserBanner,
+} from "./HomepageStyle";
+import gitActionWorld from "../assest/download.png";
 
 const Homepage = ({ children }) => {
   return (
     <Styledheader>
       {children}
+      <Banner>
+        <BannerText>
+          <div>
+            <h1>Where the world builds software</h1>
+            <p>
+              Millions of developers and companies build, ship, and maintain
+              their software on GitHub the largest and most advanced development
+              platform in the world.
+            </p>
+            <BannerForm>
+              <input type="search" placeholder="Email" name="Email" />
+              <button>sign up</button>
+            </BannerForm>
+          </div>
+          <GitUserBanner></GitUserBanner>
+        </BannerText>
+        <BannerImage>
+          <picture>
+            <source srcSet={`${gitActionWorld}`} />
+            <img src={`${gitActionWorld}`} alt="git action around the world" />
+          </picture>
+        </BannerImage>
+      </Banner>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

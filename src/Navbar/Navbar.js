@@ -7,10 +7,8 @@ import StyledNav, {
   SignUpButton,
 } from "./Styled-Nav";
 import { FaBars, FaTimes } from "react-icons/fa";
-// import data from "./navData";
 
 const Navbar = () => {
-  // const [mediaMatch, setMediaMatch] = React.useState(false);
   function handleMouseEnter(e) {
     this.open = true;
   }

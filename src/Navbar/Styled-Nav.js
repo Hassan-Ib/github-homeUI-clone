@@ -7,7 +7,7 @@ const StyledNav = styled.nav`
   position: relative;
   padding: 1rem;
 
-  @media screen and (min-width: 80em) {
+  @media screen and (min-width: 75em) {
     & > *:last-child {
       display: none;
     }
@@ -22,11 +22,11 @@ export const NavLinkContainer = styled.div`
   top: 0;
   right: 0;
 
-  font-size: 1.1rem;
+  font-size: var(--font-size-md);
   background-color: var(--color-bg-white);
   color: var(--color-text-black-1);
 
-  /* transform: translateX(100%); */
+  transform: translateX(100%);
   & > *:not(:last-child) {
     border-bottom: 1px solid var(--color-text-black);
   }
@@ -38,7 +38,8 @@ export const NavLinkContainer = styled.div`
     }
   }
   /* media query */
-  @media screen and (min-width: 80em) {
+  @media screen and (min-width: 75em) {
+    /* @media screen and (min-width: var(--media-screen-big)) { */
     position: relative;
     display: flex;
     height: auto;
@@ -71,7 +72,7 @@ export const NavLinkList = styled.ul`
     }
   }
   /* media query */
-  @media screen and (min-width: 80em) {
+  @media screen and (min-width: 75em) {
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -94,10 +95,11 @@ export const NavDetails = styled.details`
       background-color: var(--color-bg-white);
       color: var(--color-text-black);
 
-      font-size: 1rem;
+      font-size: var(--font-size-sm);
       letter-spacing: 1px;
+      border-radius: 4px;
     }
-    @media screen and (min-width: 80em) {
+    @media screen and (min-width: 75em) {
       padding-top: 1.5rem;
       position: absolute;
     }
@@ -117,8 +119,8 @@ export const NavForm = styled.form`
   padding: 1rem;
 
   input {
-    font-size: 1rem;
-    letter-spacing: var(--letter-spacing);
+    font-size: var(--font-size-md);
+    /* font-size: 4rem; */
   }
 
   label[for="search"] {
@@ -138,7 +140,7 @@ export const NavForm = styled.form`
     background-color: var(--color-bg-input);
     color: var(--color-text-placeholder);
     border: none;
-    font-size: 0.9rem;
+    font-size: var(--font-size-sm);
     text-transform: capitalize;
     margin-bottom: 0.5rem;
   }
@@ -146,7 +148,7 @@ export const NavForm = styled.form`
     display: inline-block;
     margin-left: 2rem;
   }
-  @media screen and (min-width: 80em) {
+  @media screen and (min-width: 75em) {
     padding: 0 1rem;
     margin-left: auto;
     display: flex;
@@ -170,12 +172,15 @@ export const NavForm = styled.form`
 
 export const SignUpButton = styled.button`
   margin-left: auto;
-  margin-right: 2rem;
-  font-size: var(--font-size);
+  margin-right: 1rem;
+  font-size: var(--font-size-md);
   border: 2px solid var(--color-slight-white);
   color: var(--color-text-white);
   padding: var(--padding-button);
   border-radius: var(--border-radius);
+  @media screen and (min-width: 75rem) {
+    margin-right: 0;
+  }
 `;
 
 export default StyledNav;
