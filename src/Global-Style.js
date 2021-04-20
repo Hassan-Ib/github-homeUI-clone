@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
+import { mediaQuery } from "./utilities/css/theme";
 
 const GlobalStyle = createGlobalStyle`
     
     :root{
         --scale : 1;
-        
         --letter-spacing: 1px;
         --letter-spacing-md: 2px;
         --color-slight-white: #fefefefe;
@@ -56,18 +56,23 @@ const GlobalStyle = createGlobalStyle`
     [data-theme=dark]{
 
     }
+    html{
+        font-size: 1rem;
+        @media only screen and (min-width: ${mediaQuery.md}){
+            font-size: 1.2rem;
+        }
+        box-sizing: border-box;
+    }
 
     *,
     ::after,
     ::before{
         padding: 0;
         margin: 0;
-        box-sizing: border-box;
+        box-sizing: inherit;
     }
 
-    html{
-        font-size: 1.2rem;
-    }
+   
     body{
         font-family: sans-serif;
         line-height: 1.5;
@@ -78,7 +83,7 @@ const GlobalStyle = createGlobalStyle`
         outline: 0;
         background:none;
         cursor: pointer;
-        text-transform:capitalize;
+        /* text-transform:capitalize; */
     }
     ul{
         list-style: none;

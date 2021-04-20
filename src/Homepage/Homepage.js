@@ -23,7 +23,7 @@ const Homepage = ({ children }) => {
             </p>
             <BannerForm>
               <input type="search" placeholder="Email" name="Email" />
-              <button>sign up</button>
+              <button>Sign up for Github</button>
             </BannerForm>
           </div>
           <GitUserBanner></GitUserBanner>

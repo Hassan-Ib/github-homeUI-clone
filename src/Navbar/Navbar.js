@@ -1,11 +1,11 @@
 import React from "react";
 import StyledNav, {
   NavLinkContainer,
-  NavDetails,
   NavForm,
   NavLinkList,
   SignUpButton,
 } from "./Styled-Nav";
+import NavLink from "./NavLink";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -74,76 +74,70 @@ const Navbar = () => {
         </div>
         <NavLinkList className="nav__list">
           <li>
-            <NavDetails>
-              <summary>Why Github? </summary>
-              <div>
-                <ul>
-                  <li>
-                    <a href="./">Features</a>
-                    <ul className="features__list"></ul>
-                  </li>
-                  <hr />
+            <NavLink summary="Why Github?">
+              <ul>
+                <li>
+                  <a href="./">Features</a>
+                  <ul className="features__list"></ul>
+                </li>
+                <hr />
 
-                  <li>
-                    <a href="./">Github sponsors</a>
-                  </li>
-                  <li>
-                    <a href="./">costumer stories</a>
-                  </li>
-                </ul>
-              </div>
-            </NavDetails>
+                <li>
+                  <a href="./">Github sponsors</a>
+                </li>
+                <li>
+                  <a href="./">costumer stories</a>
+                </li>
+              </ul>
+            </NavLink>
           </li>
           <li>
-            <a href="#./">Team</a>
+            {/* <a href="#./">Team</a> */}
+            <NavLink>Team</NavLink>
           </li>
           <li>
-            <a href="#./">Enterprice</a>
+            {/* <a href="#./">Enterprice</a> */}
+            <NavLink>Entertprice</NavLink>
           </li>
           <li>
-            <NavDetails>
-              <summary>Explore</summary>
-              <div>
-                <ul>
-                  <li>
-                    <a href="./">Features</a>
-                    <ul className="features__list"></ul>
-                  </li>
-                  <hr />
+            <NavLink summary="Explore">
+              <ul>
+                <li>
+                  <a href="./">Features</a>
+                  <ul className="features__list"></ul>
+                </li>
+                <hr />
 
-                  <li>
-                    <a href="./">Github sponsors</a>
-                  </li>
-                  <li>
-                    <a href="./">costumer stories</a>
-                  </li>
-                </ul>
-              </div>
-            </NavDetails>
+                <li>
+                  <a href="./">Github sponsors</a>
+                </li>
+                <li>
+                  <a href="./">costumer stories</a>
+                </li>
+              </ul>
+            </NavLink>
           </li>
           <li>
-            <a href="./">Marketplace</a>
+            {/* <a href="./">Marketplace</a> */}
+            <NavLink>Marketplace</NavLink>
           </li>
           <li>
-            <NavDetails>
-              <summary>Pricing</summary>
-              <div>
-                <ul>
-                  <li>
-                    <a href="./">Features</a>
-                    <ul className="features__list"></ul>
-                  </li>
-                  <hr />
+            <NavLink summary="Pricing">
+              <ul>
+                <li>
+                  <a href="./">Features</a>
+                  <ul className="features__list"></ul>
+                </li>
+                <hr />
 
-                  <li>
-                    <a href="./">Github sponsors</a>
-                  </li>
-                  <li>
-                    <a href="./">costumer stories</a>
-                  </li>
-                </ul>
-              </div>
-            </NavDetails>
+                <li>
+                  <a href="./">Github sponsors</a>
+                </li>
+                <li>
+                  <a href="./">costumer stories</a>
+                </li>
+              </ul>
+            </NavLink>
           </li>
         </NavLinkList>
         <NavForm action="#">

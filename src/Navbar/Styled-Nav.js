@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQuery } from "../utilities/css/theme";
 
 const StyledNav = styled.nav`
   display: flex;
@@ -6,8 +7,11 @@ const StyledNav = styled.nav`
   color: var(--color-text-white);
   position: relative;
   padding: 1rem;
+  svg {
+    color: white !important;
+  }
 
-  @media screen and (min-width: 75em) {
+  @media screen and (min-width: ${mediaQuery.md}) {
     & > *:last-child {
       display: none;
     }
@@ -38,7 +42,7 @@ export const NavLinkContainer = styled.div`
     }
   }
   /* media query */
-  @media screen and (min-width: 75em) {
+  @media screen and (min-width: ${mediaQuery.md}) {
     /* @media screen and (min-width: var(--media-screen-big)) { */
     position: relative;
     display: flex;
@@ -72,7 +76,7 @@ export const NavLinkList = styled.ul`
     }
   }
   /* media query */
-  @media screen and (min-width: 75em) {
+  @media screen and (min-width: ${mediaQuery.md}) {
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -90,6 +94,7 @@ export const NavLinkList = styled.ul`
 export const NavDetails = styled.details`
   div {
     ul {
+      /* width: auto; */
       padding: 0.5rem;
 
       background-color: var(--color-bg-white);
@@ -99,7 +104,7 @@ export const NavDetails = styled.details`
       letter-spacing: 1px;
       border-radius: 4px;
     }
-    @media screen and (min-width: 75em) {
+    @media screen and (min-width: ${mediaQuery.md}) {
       padding-top: 1.5rem;
       position: absolute;
     }
@@ -148,7 +153,7 @@ export const NavForm = styled.form`
     display: inline-block;
     margin-left: 2rem;
   }
-  @media screen and (min-width: 75em) {
+  @media screen and (min-width: ${mediaQuery.md}) {
     padding: 0 1rem;
     margin-left: auto;
     display: flex;
@@ -178,7 +183,7 @@ export const SignUpButton = styled.button`
   color: var(--color-text-white);
   padding: var(--padding-button);
   border-radius: var(--border-radius);
-  @media screen and (min-width: 75rem) {
+  @media screen and (min-width: ${mediaQuery.md}) {
     margin-right: 0;
   }
 `;

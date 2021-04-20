@@ -1,19 +1,21 @@
 import styled from "styled-components";
+import { mediaQuery } from "../utilities/css/theme";
 
 const StyledHeader = styled.header`
   background-image: linear-gradient(130deg, #042d6b, #04112a 18%);
   position: relative;
   overflow: hidden;
   color: var(--color-text-white);
-  max-height: 120vh;
+  max-height: 140vh;
   .hero__svg {
     bottom: 0%;
   }
 `;
 
 export const Banner = styled.section`
+  height: 90vh;
   padding: 0 2rem;
-  @media screen and (min-width: 75em) {
+  @media screen and (min-width: ${mediaQuery.md}) {
     display: flex;
     /* align-items: center; */
 
@@ -36,20 +38,21 @@ export const BannerText = styled.div`
 `;
 
 export const BannerImage = styled.div`
-  margin-left: 5rem;
   overflow: hidden;
   width: 100%;
+  picture,
+  img {
+    display: block;
+    height: auto;
+  }
 
-  @media screen and (min-width: 75rem) {
+  @media screen and (min-width: ${mediaQuery.md}) {
     picture {
-      display: block;
-      width: 110%;
-      height: auto;
+      width: 115%;
     }
     img {
-      display: block;
       width: 110%;
-      height: auto;
+      margin-top: -15%;
     }
   }
 `;
@@ -57,16 +60,23 @@ export const BannerForm = styled.div`
   display: flex;
   margin-top: 0.6rem;
   input {
-    flex: 2;
+    flex: 0.58;
     border-radius: 5px;
     padding: 0.5rem;
     font-size: var(--font-size);
   }
   button {
-    flex: 1;
+    flex: 0.4;
     font-size: var(--font-size);
     color: var(--color-text-white);
-    /* background-color: ; */
+    background-color: rgb(46, 164, 79);
+    background-image: linear-gradient(
+      -180deg,
+      rgb(52, 184, 89),
+      rgb(46, 164, 79)
+    );
+    border-radius: 5px;
+    margin-left: auto;
   }
 `;
 export const GitUserBanner = styled.div``;
