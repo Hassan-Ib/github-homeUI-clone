@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaQuery } from "../utilities/css/theme";
+import { mediaQuery } from "../utilities/css/theme.js";
 
 const StyledHeader = styled.header`
   background-image: linear-gradient(130deg, #042d6b, #04112a 18%);
@@ -15,9 +15,11 @@ const StyledHeader = styled.header`
 export const Banner = styled.section`
   height: 90vh;
   padding: 0 2rem;
+  text-align: center;
   @media screen and (min-width: ${mediaQuery.md}) {
     display: flex;
     /* align-items: center; */
+    text-align: inherit;
 
     & > * {
       flex-basis: 50%;
@@ -56,8 +58,11 @@ export const BannerImage = styled.div`
     }
   }
 `;
+
 export const BannerForm = styled.div`
   display: flex;
+  width: 80%;
+  margin: 0 auto;
   margin-top: 0.6rem;
   input {
     flex: 0.58;
@@ -78,6 +83,11 @@ export const BannerForm = styled.div`
     border-radius: 5px;
     margin-left: auto;
   }
+  @media (min-width: ${mediaQuery.md}) {
+    width: inherit;
+  }
 `;
+
 export const GitUserBanner = styled.div``;
+
 export default StyledHeader;

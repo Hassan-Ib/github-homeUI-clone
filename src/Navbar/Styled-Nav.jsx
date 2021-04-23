@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaQuery } from "../utilities/css/theme";
+import { mediaQuery } from "../utilities/css/theme.js";
 
 const StyledNav = styled.nav`
   display: flex;
@@ -41,9 +41,7 @@ export const NavLinkContainer = styled.div`
       margin-left: auto;
     }
   }
-  /* media query */
   @media screen and (min-width: ${mediaQuery.md}) {
-    /* @media screen and (min-width: var(--media-screen-big)) { */
     position: relative;
     display: flex;
     height: auto;
@@ -93,9 +91,9 @@ export const NavLinkList = styled.ul`
 
 export const NavDetails = styled.details`
   div {
-    ul {
+    ul:first-child {
       /* width: auto; */
-      padding: 0.5rem;
+      padding: 1rem;
 
       background-color: var(--color-bg-white);
       color: var(--color-text-black);
