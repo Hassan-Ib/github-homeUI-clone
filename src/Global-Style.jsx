@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "./utils/theme";
 
 const GlobalStyle = createGlobalStyle`
     
@@ -58,12 +57,12 @@ const GlobalStyle = createGlobalStyle`
 
         --linear-gradient : linear-gradient(130deg, var(--color-scale-blue-7) , #04112a 18%);
     }
-    @media (min-width: ${theme.media.sm}){
+    @media (min-width: ${(props) => props.theme.media.sm}){
         :root{
             --scale: 1.2;
         }
     }   
-    @media (min-width: ${theme.media.md}){
+    @media (min-width: ${(props) => props.theme.media.md}){
         :root{
             --scale: 1.4;
         }

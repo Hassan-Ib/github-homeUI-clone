@@ -5,7 +5,7 @@ import Styledheader, {
   BannerImage,
   BannerForm,
   GitUserBanner,
-} from "./HomepageStyle";
+} from "./HomeStyle.jsx";
 import gitActionWorld from "../assest/download.png";
 
 const Homepage = ({ children }) => {
@@ -40,8 +40,7 @@ const Homepage = ({ children }) => {
         fill="none"
         preserveAspectRatio="none"
         viewBox="0 0 1680 40"
-        className="position-absolute hero__svg"
-      >
+        className="position-absolute hero__svg">
         <path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#fff"></path>
       </svg>
     </Styledheader>
