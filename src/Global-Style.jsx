@@ -1,12 +1,9 @@
 import { createGlobalStyle } from "styled-components";
-import { mediaQuery } from "./utilities/css/theme";
+import { theme } from "./utils/theme";
 
 const GlobalStyle = createGlobalStyle`
     
     :root{
-        --scale : 1;
-        --letter-spacing: 1px;
-        --letter-spacing-md: 2px;
         --color-slight-white: #fefefefe;
         --color-scale-black: #1b1f23;
         --color-scale-white: #fff;
@@ -27,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
         --color-scale-blue-4: #2188ff;
         --color-scale-blue-5: #0366d6;
         --color-scale-blue-6: #005cc5;
-        --color-scale-blue-7: #044289;
+        --color-scale-blue-7: #042d6b;
         --color-scale-blue-8: #032f62;
         --color-scale-blue-9: #05264c;
         --color-text-primary: #24292e;
@@ -44,40 +41,79 @@ const GlobalStyle = createGlobalStyle`
         --color-bg-input: #293244;
         --color-bg-white: #fefefe;
         --color-bg-black: #111;
-        --padding-button: 0.4rem 0.5rem;
-        --border-radius: 10px;
-        --font-size-sm: .8rem;
-        --font-size-md: 1rem;
-        --font-size: 1.1rem;
-        --media-screen-big:75em;
+        --scale : 1;
+        --fs-title: calc(2.3rem * var(--scale));
+        --fw-title : 900;
+        --fs-subtitle: calc(1.6rem * var(--scale));
+        --fs-paragraphy: calc(1.2rem * var(--scale));
+        --fs-sm: calc(.8rem * var(--scale));
+        --fs-md: calc(1rem * var(--scale));
+        --fs: calc(1.1rem * var(--scale));
+        --letter-spacing: 1px;
+        --letter-spacing-md: 2px;
+        --spacing-xsm: .6rem;
+        --spacing-sm: 1rem;
+        --spacing-md: 3rem;
+        --spacing-lg: 5rem;
 
+        --linear-gradient : linear-gradient(130deg, var(--color-scale-blue-7) , #04112a 18%);
+    }
+    @media (min-width: ${theme.media.sm}){
+        :root{
+            --scale: 1.2;
+        }
     }   
-    
+    @media (min-width: ${theme.media.md}){
+        :root{
+            --scale: 1.4;
+        }
+    }
     [data-theme=dark]{
 
     }
-    html{
-        font-size: 1rem;
-        @media only screen and (min-width: ${mediaQuery.md}){
-            font-size: 1.2rem;
-        }
+
+    *,
+    *::after,
+    *::before{
+        padding: 0;
+        margin: 0;
         box-sizing: border-box;
     }
 
-    *,
-    ::after,
-    ::before{
-        padding: 0;
-        margin: 0;
-        box-sizing: inherit;
+    html:focus-within {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+            scroll-behavior: auto;
+        }
+    
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+    body{
+        font-family: sans-serif;
+        line-height: 1.3;
+        color: var(--color-text-primary);
+    }
+    h1{
+        line-height: 1.1;
+    }
+    img,
+    picture {
+        max-width: 100%;
+        display: block;
     }
 
    
-    body{
-        font-family: sans-serif;
-        line-height: 1.5;
-        color: var(--color-text-primary);
-    }
+    
     button, input[type="button"]{
         border: 0;
         outline: 0;
@@ -85,9 +121,21 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         /* text-transform:capitalize; */
     }
-    ul{
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    ul[role='list'],
+    ol[role='list'] {
         list-style: none;
     }
+    ul,ol{
+        list-style: none;
+    }
+
     a{
         text-decoration: none;
         color: inherit;

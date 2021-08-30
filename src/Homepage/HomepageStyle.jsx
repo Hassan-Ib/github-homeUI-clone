@@ -1,36 +1,30 @@
 import styled from "styled-components";
-import { mediaQuery } from "../utilities/css/theme.js";
+// import { theme } from "../utils/theme.js";
 
 const StyledHeader = styled.header`
-  background-image: linear-gradient(130deg, #042d6b, #04112a 18%);
+  background-image: var(--linear-gradient);
   position: relative;
   overflow: hidden;
   color: var(--color-text-white);
-  max-height: 140vh;
   .hero__svg {
     bottom: 0%;
   }
 `;
 
 export const Banner = styled.section`
-  height: 90vh;
-  padding: 0 2rem;
+  position: relative;
+  max-height: 40rem;
   text-align: center;
-  @media screen and (min-width: ${mediaQuery.md}) {
-    display: flex;
-    /* align-items: center; */
-    text-align: inherit;
-
-    & > * {
-      flex-basis: 50%;
-    }
-  }
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-lg) var(--spacing-sm);
 `;
+
 export const BannerText = styled.div`
-  padding-top: 5rem;
   h1 {
-    font-size: 3.5rem;
-    line-height: 1;
+    font-size: var(--fs-title);
+    font-weight: var(--fw-title);
+    line-height: 1.1;
   }
   p {
     color: var(--color-text-white-1);
@@ -41,38 +35,25 @@ export const BannerText = styled.div`
 
 export const BannerImage = styled.div`
   overflow: hidden;
-  width: 100%;
-  picture,
-  img {
-    display: block;
-    height: auto;
-  }
-
-  @media screen and (min-width: ${mediaQuery.md}) {
-    picture {
-      width: 115%;
-    }
-    img {
-      width: 110%;
-      margin-top: -15%;
-    }
-  }
+  width: 200%;
 `;
 
 export const BannerForm = styled.div`
-  display: flex;
-  width: 80%;
   margin: 0 auto;
-  margin-top: 0.6rem;
-  input {
-    flex: 0.58;
-    border-radius: 5px;
+  margin-top: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+
+  input,
+  button {
     padding: 0.5rem;
-    font-size: var(--font-size);
+    border-radius: 5px;
+    font-size: var(--fs);
+  }
+  input {
+    margin-bottom: var(--spacing-xsm);
   }
   button {
-    flex: 0.4;
-    font-size: var(--font-size);
     color: var(--color-text-white);
     background-color: rgb(46, 164, 79);
     background-image: linear-gradient(
@@ -80,11 +61,6 @@ export const BannerForm = styled.div`
       rgb(52, 184, 89),
       rgb(46, 164, 79)
     );
-    border-radius: 5px;
-    margin-left: auto;
-  }
-  @media (min-width: ${mediaQuery.md}) {
-    width: inherit;
   }
 `;
 

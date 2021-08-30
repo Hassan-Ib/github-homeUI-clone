@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import StyledNav, {
   NavLinkContainer,
   NavForm,
@@ -18,7 +18,7 @@ const Navbar = () => {
     this.open = false;
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     const mediaq = window.matchMedia("(min-width: 80em)");
     const details = document.querySelectorAll("details");
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaQuery } from "../utilities/css/theme.js";
+import { theme } from "../utils/theme.js";
 
 const StyledNav = styled.nav`
   display: flex;
@@ -11,7 +11,7 @@ const StyledNav = styled.nav`
     color: white !important;
   }
 
-  @media screen and (min-width: ${mediaQuery.md}) {
+  @media screen and (min-width: ${theme.media.md}) {
     & > *:last-child {
       display: none;
     }
@@ -41,7 +41,7 @@ export const NavLinkContainer = styled.div`
       margin-left: auto;
     }
   }
-  @media screen and (min-width: ${mediaQuery.md}) {
+  @media screen and (min-width: ${theme.media.md}) {
     position: relative;
     display: flex;
     height: auto;
@@ -74,7 +74,7 @@ export const NavLinkList = styled.ul`
     }
   }
   /* media query */
-  @media screen and (min-width: ${mediaQuery.md}) {
+  @media screen and (min-width: ${theme.media.md}) {
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -102,7 +102,7 @@ export const NavDetails = styled.details`
       letter-spacing: 1px;
       border-radius: 4px;
     }
-    @media screen and (min-width: ${mediaQuery.md}) {
+    @media screen and (min-width: ${theme.media.md}) {
       padding-top: 1.5rem;
       position: absolute;
     }
@@ -151,7 +151,7 @@ export const NavForm = styled.form`
     display: inline-block;
     margin-left: 2rem;
   }
-  @media screen and (min-width: ${mediaQuery.md}) {
+  @media screen and (min-width: ${theme.media.md}) {
     padding: 0 1rem;
     margin-left: auto;
     display: flex;
@@ -181,7 +181,7 @@ export const SignUpButton = styled.button`
   color: var(--color-text-white);
   padding: var(--padding-button);
   border-radius: var(--border-radius);
-  @media screen and (min-width: ${mediaQuery.md}) {
+  @media screen and (min-width: ${theme.media.md}) {
     margin-right: 0;
   }
 `;
